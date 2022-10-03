@@ -107,6 +107,42 @@ footer {
     background-color: var(--button-color);
 }
 
+.headerLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerLink::after {
+    content: "";
+    width: 0;
+    height: 0;
+    margin-left: 1em;
+    border-style: solid;
+    border-width: 10px 7px 0 7px;
+    border-color: var(--primary) transparent transparent transparent;
+}
+
+.headerLink:hover::after {
+    border-color: white transparent transparent transparent;
+}
+
+.about {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.about::after {
+    content: "";
+    position: absolute;
+    right:0;
+    bottom: -100px;
+    width: 0;
+    height: 0;
+    border-top: 100px solid var(--primary);
+    border-right: 100vw solid transparent;
+}
+
 .aboutContainer {
     max-width: 960px;
     margin: 0 auto;
@@ -132,6 +168,19 @@ footer {
 
 .contact {
     text-align: center;
+    margin-top: 100px;
+    position: relative;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -100px;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid var(--primary);
+    border-left: 100vw solid transparent;
 }
 
 .social {
@@ -186,3 +235,4 @@ footer {
         object-fit: cover;
     }
 }
+
